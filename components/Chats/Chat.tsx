@@ -1,6 +1,6 @@
 "use client";
 import { useCourse } from "@/lib/context/useCourse";
-import { Grid, Typography } from "@mui/material";
+import { Grid2 as Grid, Typography } from "@mui/material";
 
 export const Chat = () => {
   const { selectedCourse, selectedDiscipline } = useCourse();
@@ -9,7 +9,6 @@ export const Chat = () => {
     <>
       <Grid container spacing={2} justifyContent={"center"}>
         <Grid
-          item
           xs={11}
           sm={11}
           md={8}
