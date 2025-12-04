@@ -1,46 +1,40 @@
 "use client";
 import { useCourse } from "@/lib/context/useCourse";
-import { Grid, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 export const Chat = () => {
   const { selectedCourse, selectedDiscipline } = useCourse();
 
   return (
-    <>
-      <Grid container spacing={2} justifyContent={"center"}>
-        <Grid
-          xs={11}
-          sm={11}
-          md={8}
+    <Box sx={{ display: "flex", justifyContent: "center", my: 5 }}>
+      <Box
+        sx={{
+          width: { xs: "91.66%", sm: "91.66%", md: "66.66%" },
+          backgroundColor: "background.default",
+          textAlign: "center",
+        }}
+      >
+        <Typography
+          variant="h5"
+          component="h1"
           sx={{
-            backgroundColor: "background.default",
-            textAlign: "center",
-            my: 5,
+            color: "#0C0C12",
+            fontWeight: 600,
           }}
         >
-          <Typography
-            variant="h5"
-            component="h1"
-            sx={{
-              color: "#0C0C12",
-              fontWeight: 600,
-            }}
-          >
-            {selectedCourse}
-          </Typography>
-          <Typography
-            variant="h6"
-            component="h2"
-            sx={{
-              color: "#4C4B67",
-              fontWeight: 500,
-            }}
-          >
-            {selectedDiscipline}
-          </Typography>
-        </Grid>
-      </Grid>
-      <Grid container></Grid>
-    </>
+          {selectedCourse}
+        </Typography>
+        <Typography
+          variant="h6"
+          component="h2"
+          sx={{
+            color: "#4C4B67",
+            fontWeight: 500,
+          }}
+        >
+          {selectedDiscipline}
+        </Typography>
+      </Box>
+    </Box>
   );
 };
