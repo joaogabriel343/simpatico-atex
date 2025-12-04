@@ -1,6 +1,6 @@
 "use client";
 import { useCourse } from "@/lib/context/useCourse";
-import { Grid2 as Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 export const Chat = () => {
   const { selectedCourse, selectedDiscipline } = useCourse();
